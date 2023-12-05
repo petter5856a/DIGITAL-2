@@ -1,0 +1,150 @@
+
+firmware.elf:     file format elf32-littleriscv
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 everything    000001c2  00000000  00000000  00000054  2**2
+                  CONTENTS, ALLOC, LOAD, CODE
+
+Disassembly of section everything:
+
+00000000 <i2c>:
+   0:	004201b7          	lui	gp,0x420
+   4:	00421537          	lui	a0,0x421
+   8:	20850513          	addi	a0,a0,520 # 421208 <I2C_BASE+0x1208>
+   c:	00a1a223          	sw	a0,4(gp) # 420004 <I2C_BASE+0x4>
+  10:	00100593          	li	a1,1
+  14:	00b1a423          	sw	a1,8(gp)
+  18:	0001a423          	sw	zero,8(gp)
+  1c:	00100313          	li	t1,1
+  20:	00c1a383          	lw	t2,12(gp)
+  24:	00737333          	and	t1,t1,t2
+  28:	fe030ae3          	beqz	t1,1c <PIXEL+0x8>
+
+0000002c <.new_reg>:
+  2c:	00421537          	lui	a0,0x421
+  30:	18050513          	addi	a0,a0,384 # 421180 <I2C_BASE+0x1180>
+  34:	00a1a223          	sw	a0,4(gp)
+  38:	00b1a423          	sw	a1,8(gp)
+  3c:	0001a423          	sw	zero,8(gp)
+  40:	00100313          	li	t1,1
+  44:	00c1a383          	lw	t2,12(gp)
+  48:	00737333          	and	t1,t1,t2
+  4c:	fe030ae3          	beqz	t1,40 <.new_reg+0x14>
+
+00000050 <.new_reg1>:
+  50:	00424537          	lui	a0,0x424
+  54:	01050513          	addi	a0,a0,16 # 424010 <I2C_BASE+0x4010>
+  58:	00a1a223          	sw	a0,4(gp)
+  5c:	00b1a423          	sw	a1,8(gp)
+  60:	0001a423          	sw	zero,8(gp)
+  64:	00100313          	li	t1,1
+  68:	00c1a383          	lw	t2,12(gp)
+  6c:	00737333          	and	t1,t1,t2
+  70:	fe030ae3          	beqz	t1,64 <.new_reg1+0x14>
+
+00000074 <.new_reg2>:
+  74:	00421537          	lui	a0,0x421
+  78:	20850513          	addi	a0,a0,520 # 421208 <I2C_BASE+0x1208>
+  7c:	00a1a223          	sw	a0,4(gp)
+  80:	00b1a423          	sw	a1,8(gp)
+  84:	0001a423          	sw	zero,8(gp)
+  88:	00100313          	li	t1,1
+  8c:	00c1a383          	lw	t2,12(gp)
+  90:	00737333          	and	t1,t1,t2
+  94:	fe030ae3          	beqz	t1,88 <.new_reg2+0x14>
+
+00000098 <.new_reg3>:
+  98:	00422537          	lui	a0,0x422
+  9c:	80250513          	addi	a0,a0,-2046 # 421802 <I2C_BASE+0x1802>
+  a0:	00a1a223          	sw	a0,4(gp)
+  a4:	00b1a423          	sw	a1,8(gp)
+  a8:	0001a423          	sw	zero,8(gp)
+  ac:	00100313          	li	t1,1
+  b0:	00c1a383          	lw	t2,12(gp)
+  b4:	00737333          	and	t1,t1,t2
+  b8:	fe030ae3          	beqz	t1,ac <.new_reg3+0x14>
+
+000000bc <.new_reg4>:
+  bc:	00423537          	lui	a0,0x423
+  c0:	24050513          	addi	a0,a0,576 # 423240 <I2C_BASE+0x3240>
+  c4:	00a1a223          	sw	a0,4(gp)
+  c8:	00b1a423          	sw	a1,8(gp)
+  cc:	0001a423          	sw	zero,8(gp)
+  d0:	00100313          	li	t1,1
+  d4:	00c1a383          	lw	t2,12(gp)
+  d8:	00737333          	and	t1,t1,t2
+  dc:	fe030ae3          	beqz	t1,d0 <.new_reg4+0x14>
+
+000000e0 <.new_reg5>:
+  e0:	00427537          	lui	a0,0x427
+  e4:	77750513          	addi	a0,a0,1911 # 427777 <I2C_BASE+0x7777>
+  e8:	00a1a223          	sw	a0,4(gp)
+  ec:	00b1a423          	sw	a1,8(gp)
+  f0:	0001a423          	sw	zero,8(gp)
+  f4:	00100313          	li	t1,1
+  f8:	00c1a383          	lw	t2,12(gp)
+  fc:	00737333          	and	t1,t1,t2
+ 100:	fe030ae3          	beqz	t1,f4 <.new_reg5+0x14>
+
+00000104 <.new_reg6>:
+ 104:	00422537          	lui	a0,0x422
+ 108:	90350513          	addi	a0,a0,-1789 # 421903 <I2C_BASE+0x1903>
+ 10c:	00a1a223          	sw	a0,4(gp)
+ 110:	00b1a423          	sw	a1,8(gp)
+ 114:	0001a423          	sw	zero,8(gp)
+ 118:	00100313          	li	t1,1
+ 11c:	00c1a383          	lw	t2,12(gp)
+ 120:	00737333          	and	t1,t1,t2
+ 124:	fe030ae3          	beqz	t1,118 <.new_reg6+0x14>
+
+00000128 <.new_reg7>:
+ 128:	00422537          	lui	a0,0x422
+ 12c:	a7b50513          	addi	a0,a0,-1413 # 421a7b <I2C_BASE+0x1a7b>
+ 130:	00a1a223          	sw	a0,4(gp)
+ 134:	00b1a423          	sw	a1,8(gp)
+ 138:	0001a423          	sw	zero,8(gp)
+ 13c:	00100313          	li	t1,1
+ 140:	00c1a383          	lw	t2,12(gp)
+ 144:	00737333          	and	t1,t1,t2
+ 148:	fe030ae3          	beqz	t1,13c <.new_reg7+0x14>
+
+0000014c <.new_reg8>:
+ 14c:	00420537          	lui	a0,0x420
+ 150:	30a50513          	addi	a0,a0,778 # 42030a <I2C_BASE+0x30a>
+ 154:	00a1a223          	sw	a0,4(gp)
+ 158:	00b1a423          	sw	a1,8(gp)
+ 15c:	0001a423          	sw	zero,8(gp)
+ 160:	00100313          	li	t1,1
+ 164:	00c1a383          	lw	t2,12(gp)
+ 168:	00737333          	and	t1,t1,t2
+ 16c:	fe030ae3          	beqz	t1,160 <.new_reg8+0x14>
+ 170:	00000293          	li	t0,0
+ 174:	004301b7          	lui	gp,0x430
+
+00000178 <.camera>:
+ 178:	00100313          	li	t1,1
+ 17c:	0101a383          	lw	t2,16(gp) # 430010 <CAMERA_BASE+0x10>
+ 180:	00737333          	and	t1,t1,t2
+ 184:	fe030ae3          	beqz	t1,178 <.camera>
+
+00000188 <.camera1>:
+ 188:	0141a503          	lw	a0,20(gp)
+ 18c:	00418193          	addi	gp,gp,4
+ 190:	00a1a023          	sw	a0,0(gp)
+ 194:	00128293          	addi	t0,t0,1
+ 198:	0000c337          	lui	t1,0xc
+ 19c:	60030313          	addi	t1,t1,1536 # c600 <.camera1+0xc478>
+ 1a0:	fe62c4e3          	blt	t0,t1,188 <.camera1>
+ 1a4:	00008067          	ret
+ 1a8:	1941                	addi	s2,s2,-16
+ 1aa:	0000                	unimp
+ 1ac:	7200                	flw	fs0,32(a2)
+ 1ae:	7369                	lui	t1,0xffffa
+ 1b0:	01007663          	bgeu	zero,a6,1bc <.camera1+0x34>
+ 1b4:	0000000f          	fence	unknown,unknown
+ 1b8:	7205                	lui	tp,0xfffe1
+ 1ba:	3376                	fld	ft6,376(sp)
+ 1bc:	6932                	flw	fs2,12(sp)
+ 1be:	7032                	flw	ft0,44(sp)
+ 1c0:	0030                	addi	a2,sp,8

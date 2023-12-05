@@ -1,0 +1,22 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+BRAM             0x0000000000000000 0x0000000000004000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+
+everything      0x0000000000000000      0x1c2
+                0x0000000000000000                . = ALIGN (0x4)
+ i2c.o(.text)
+ .text          0x0000000000000000      0x1a8 i2c.o
+                0x0000000000000000                i2c
+ *(.*)
+ .data          0x00000000000001a8        0x0 i2c.o
+ .bss           0x00000000000001a8        0x0 i2c.o
+ .riscv.attributes
+                0x00000000000001a8       0x1a i2c.o
+LOAD i2c.o
+OUTPUT(firmware.elf elf32-littleriscv)
